@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="ahuy.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Work+Sans:wght@300;400&display=swap" rel="stylesheet" />
+
+    <title>Parsa</title>
+    <style>
+      #main {
+        background-image: url("../HomeWork/Gunung-Rinjani-Pulau-Lombok.jpeg");
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+      }
+
+      .flip-box {
+        background-color: transparent;
+        width: 300px;
+        height: 200px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+      }
+
+      .flip-box-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+
+      .flip-box:hover .flip-box-inner {
+        transform: rotateY(180deg);
+      }
+
+      .flip-box-front,
+      .flip-box-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+      }
+
+      .flip-box-front {
+        background-color: #bbb;
+        color: black;
+      }
+
+      .flip-box-back {
+        background-color: black;
+        color: white;
+        transform: rotateY(180deg);
+        padding-top: 50px;
+      }
+
+      .card img:hover {
+        transform: scale(1.1);
+      }
+
+      .jumbo {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+      }
+      .tebal {
+        font-weight: bold;
+      }
+
+      /* #artikel{
+        gap: 2%;
+      } */
+
+      /* #konten1, #konten2, #konten3, #konten4{
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        background-position: center;
+        color: floralwhite;
+        font-size: 1.4rem;
+        font-weight: bold;
+        
+      } */
+
+      /* #konten1:hover, #konten2:hover, #konten3:hover, #konten4:hover{
+        font-size: 1.8rem;
+        animation: shake 0.5s;
+        animation-iteration-count: infinite; 
+      }
+
+      @keyframes shake {
+      0% { transform: translate(1px, 1px) rotate(0deg); }
+      10% { transform: translate(-1px, -2px) rotate(-1deg); }
+      20% { transform: translate(-3px, 0px) rotate(1deg); }
+      30% { transform: translate(3px, 2px) rotate(0deg); }
+      40% { transform: translate(1px, -1px) rotate(1deg); }
+      50% { transform: translate(-1px, 2px) rotate(-1deg); }
+      60% { transform: translate(-3px, 1px) rotate(0deg); }
+      70% { transform: translate(3px, 1px) rotate(-1deg); }
+      80% { transform: translate(-1px, -1px) rotate(1deg); }
+      90% { transform: translate(1px, 2px) rotate(0deg); }
+      100% { transform: translate(1px, -2px) rotate(-1deg); }
+      }
+      
+
+      
+
+      #konten1{
+        background-image: url(lombok.jpeg);
+      }
+
+      #konten2{
+        background-image: url(pdng.jpg);
+      }
+
+      #konten3{
+        background-image: url(tempat-wisata-bali.jpg);
+      }
+
+      #konten4{
+        background-image: url(bandaaceh.jpeg);
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid" id="main">
+      <div class="row">
+        <div class="col-md-12">
+          <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="font-weight: bold">
+            <a class="navbar-brand" href="#"> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+            <div class="form-inline my-2 my-lg-0">
+              <ul class="navbar-nav d-lg-inline-flex">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#" style="color: white">Beranda <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#" style="color: white">Sejarah</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white"> Tur Virtual</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="piknik.html">Lombok</a>
+                    <a class="dropdown-item" href="#">Minangkabau</a>
+                    <a class="dropdown-item" href="#">Aceh</a>
+                    <a class="dropdown-item" href="#">Bali</a>
+                  </div>
+                </li>
+              </ul>
+              <input class="form-inline my-2 my-lg-0" type="search" placeholder="Search" aria-label="Search" />
+            </div>
+          </nav>
+          <h1 class="" style="font-family: 'Poppins'; font-weight: bold; margin-top: 15%; color: white">Wisata<br />Anugerah Alam Indonesia</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <img src="../HomeWork/Logo_Pesona_Indonesia_(Kementerian_Pariwisata).png" class="img-fluid" alt="Responsive image" />
+        </div>
+      </div>
+    </div> -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="jumbotron jumbotron-fluid bg-white">
+            <div class="container">
+              <h1 class="display-4">Pariwisata</h1>
+              <ul class="jumbo">
+                <li class="tebal">Tagar :</li>
+                <li>
+                  <a href="#"><u>Lombok</u></a>
+                </li>
+                <li>
+                  <a href="#"><u>Minangkabau</u></a>
+                </li>
+                <li>
+                  <a href="#"><u>Bali</u></a>
+                </li>
+                <li>
+                  <a href="#"><u>Aceh</u></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="lombok.jpeg" alt="lombok" style="width: 300px; height: 200px" />
+              </div>
+              <div class="flip-box-back">
+                <h2>Lombok</h2>
+                <p>What an amazing city</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="pdng.jpg" alt="Padang" style="width: 300px; height: 200px" />
+              </div>
+              <div class="flip-box-back">
+                <h2>Padang</h2>
+                <p>What an amazing city</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="tempat-wisata-bali.jpg" alt="Bali" style="width: 300px; height: 200px" />
+              </div>
+              <div class="flip-box-back">
+                <h2>Bali</h2>
+                <p>What an amazing city</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <img src="bandaaceh.jpeg" alt="aceh" style="width: 300px; height: 200px" />
+              </div>
+              <div class="flip-box-back">
+                <h2>Aceh</h2>
+                <p>What an amazing city</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="container">
+      <div class="row" id="artikel">
+        <div class="col-md" id="konten1">
+          <div class="neni">
+            Lombok
+          </div>
+        </div>
+        <div class="col-md" id="konten2">
+          <div class="neni">
+            Minangkabau
+          </div>
+        </div>
+        <div class="col-md" id="konten3">
+          <div class="neni">
+            Bali
+          </div>
+        </div>
+        <div class="col-md" id="konten4">
+          <div class="neni">
+            Aceh
+          </div>
+        </div>
+    </div> -->
+
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="../HomeWork/borobudur-temple-featured.jpg" alt="First slide" />
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="../HomeWork/tempat-wisata-bali.jpg" alt="Second slide" />
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="../HomeWork/petani adv.jpg" alt="Third slide" />
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-unstyled">
+            <li class="media">
+              <img class="mr-3" src="../HomeWork/bunaken.jpeg" alt="Generic placeholder image" style="width: 200px" data-aos="fade-right" />
+              <div class="media-body">
+                <h5 class="mt-0 mb-1">Taman Nasional Bunaken</h5>
+                <p align="justify">
+                  Taman Nasional Bunaken adalah taman laut yang terletak di Sulawesi Utara, Indonesia. Taman ini terletak di Segitiga Terumbu Karang yang menjadi habitat bagi 390 spesies terumbu karang[2] dan juga berbagai spesies ikan,
+                  moluska, reptil, dan mamalia laut. Taman Nasional Bunaken merupakan perwakilan ekosistem laut Indonesia, meliputi padang rumput laut, terumbu karang, dan ekosistem pantai.[3] Taman nasional ini didirikan pada tahun 1991
+                  dan meliputi wilayah seluas 890.65 km². 97% dari taman nasional ini merupakan habitat laut, sementara 3% sisanya merupakan daratan, meliputi lima pulau: Bunaken, Manado Tua, Mantehage, Naen, dan Siladen.
+                </p>
+              </div>
+            </li>
+            <li class="media my-4">
+              <img class="mr-3" src="../HomeWork/candi.jpeg" alt="Generic placeholder image" style="width: 200px" data-aos="fade-right" />
+              <div class="media-body">
+                <h5 class="mt-0 mb-1">Candi Borobudur</h5>
+                <p align="justify">
+                  Borobudur adalah sebuah candi Buddha yang terletak di Borobudur, Magelang, Jawa Tengah, Indonesia. Candi ini terletak kurang lebih 100 km di sebelah barat daya Semarang, 86 km di sebelah barat Surakarta, dan 40 km di
+                  sebelah barat laut Yogyakarta. Candi dengan banyak stupa ini didirikan oleh para penganut agama Buddha Mahayana sekitar tahun 800-an Masehi pada masa pemerintahan wangsa Syailendra. Borobudur adalah candi atau kuil Buddha
+                  terbesar di dunia,[2][3] sekaligus salah satu monumen Buddha terbesar di dunia.[4]
+                </p>
+              </div>
+            </li>
+            <li class="media">
+              <img class="mr-3" src="../HomeWork/losari.jpeg" alt="Generic placeholder image" style="width: 200px" data-aos="fade-right" />
+              <div class="media-body">
+                <h5 class="mt-0 mb-1">Pantai losari</h5>
+                <p align="justify">
+                  Pantai Losari adalah sebuah pantai yang terletak di sebelah barat Kota Makassar, Provinsi Sulawesi Selatan, Indonesia. Pantai ini menjadi tempat bagi warga Makassar untuk menghabiskan waktu pada pagi, sore, dan malam hari
+                  menikmati pemandangan matahari tenggelam yang sangat indah.[1] Jarak Pantai Losari dari Bandar Udara Internasional Sultan Hasanuddin kurang lebih 20 kilometer memakan waktu sekitar 30 menit jika melalui Jalan Tol Insinyur
+                  Sutami.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="card">
+            <img class="card-img-top" src="../HomeWork/wdf.jpg" alt="Card image cap" />
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="card">
+            <img class="card-img-top" src="../HomeWork/tempatkuliner.jpg" alt="Card image cap" />
+            <div class="card-body">
+              <p>Macam-macam Wisata Kuliner Di Indonesia</p>
+              <a href="#"><button class="btn btn-info">Selengkapnya</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid mt-4 bg-white text-dark">
+      <div class="container">
+        <h1 class="display-4">Wonderfull Indonesia</h1>
+        <p class="lead">
+          Dampak dari Wonderful Indonesia adalah mampu membantu pengelolaan pariwisata dengan baik secara tidak langsung. Hal ini karena Wonderful Indonesia bertujuan untuk meningkatkan kunjungan wisatawan asing ke Indonesia.
+        </p>
+      </div>
+    </div>
+
+    <footer class="footer" style="height: 300px; font-weight: bold; padding-top: 20px; padding-left: 50px; display: flex; justify-content: space-between; background: black">
+      <div class="container-fluid">
+        <div class="row" id="garis">
+          <div class="col-md-4">
+            <h4 class="text-white" id="nam" style="width: 110%">
+              <span style="font-family: 'Mountain'">m</span>
+              Anugerah Alam Indonesia
+            </h4>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.054926563275!2d106.77527751417794!3d-6.386913495378546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e92c0df5da9d%3A0x8499222ee6779470!2sPeTIK%20(Pesantren%20Teknologi%20Informasi%20dan%20Komunikasi)!5e0!3m2!1sid!2sid!4v1645520746944!5m2!1sid!2sid"
+              width="370"
+              height="200"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="col-md-5">
+            <h5 class="text-white" style="margin-left: 210px">Lokasi</h5>
+            <p class="text-white" id="lok">
+              <i class="fa fa-home">&nbsp; Jl. Mandor Basar No.54 Rangkapanjaya, Pancoran Mas Depok, 16435</i>
+            </p>
+            <br />
+            <p class="text-white"><i class="fa fa-map-marker-alt">&nbsp; Koordinat (-6.386680, 106.777305) (021) 77668891</i></p>
+          </div>
+          <div class="col-md ml-5">
+            <img src="../HomeWork/Jelajah pARSA.png" alt="" class="manuk" />
+            <ul class="medsos">
+              <a href="#"
+                ><li><img src="../HomeWork/facebook.png" alt="" /></li
+              ></a>
+              <a href="#"
+                ><li><img src="../HomeWork/instagram (1).png" alt="" style="width: 45px; margin-top: -0px" /></li
+              ></a>
+              <a href="#"
+                ><li><img src="../HomeWork/twitter.png" alt="" /></li
+              ></a>
+              <a href="#"
+                ><li><img src="../HomeWork/yt_bulat2.png" alt="" style="width: 45px; margin-top: -0px" /></li
+              ></a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="navonscroll.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Function Call -->
+    <script>
+      AOS.init({
+        duration: 600,
+      });
+    </script>
+    <script>
+      hide_on_scroll({
+        nav_id: "demo1Navbar",
+      });
+    </script>
+  </body>
+</html>

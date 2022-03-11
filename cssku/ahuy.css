@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "PirataOne";
+  src: url("../pirata_one/PirataOne-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Mountain";
+  src: url("../mountain/Mountain.ttf");
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+#nam {
+  /* padding-top: 100px; */
+  font-family: PirataOne;
+  font-size: 35px;
+}
+#lok {
+  padding-top: 30px;
+}
+.manuk {
+  width: 200px;
+}
+.medsos {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+.medsos img {
+  width: 40px;
+  margin: 3px;
+}
